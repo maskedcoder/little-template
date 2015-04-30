@@ -1,0 +1,16 @@
+{
+  "name": "little-template",
+  "version": "0.1.0",
+  "description": "A simple HTML template engine",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "engine",
+    "template",
+    "html"
+  ],
+  "author": "Andrew Myers",
+  "license": "MIT"
+}
