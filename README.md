@@ -6,21 +6,21 @@ Little Template lets you generate static HTML using data specified *in* your HTM
 ```
 <!-- Omitting HTML -->
 
-{{template navigationMenu}}
+{{#template navigationMenu}}
 
-  {{var heading}}Navigation{{/var}}
+  {{#var heading}}Navigation{{/var}}
 
-    {{list nav}}
-      {{object}}
-          {{var href}}/index{{/var}}
-            {{var name}}Home{{/var}}
-        {{/object}}
+  {{#list nav}}
+    {{#object}}
+      {{#var href}}/index{{/var}}
+      {{#var name}}Home{{/var}}
+    {{/object}}
 
-        {{object}}
-          {{var href}}/blog{{/var}}
-            {{var name}}Blog{{/var}}
-        {{/object}}
-    {{/list}}
+    {{#object}}
+      {{#var href}}/blog{{/var}}
+      {{#var name}}Blog{{/var}}
+    {{/object}}
+  {{/list}}
 
 {{/template}}
 ```
