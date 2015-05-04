@@ -49,15 +49,10 @@ var LittleTemplate = require('little-template');
 var fs = require('fs');
 var jade = require('jade'); // Could be any template engine
 
-var options = {
-  // Tell Little Template where to find the templates
-  templateDir: '/path/to/template/storage/',
-    // Give an engine to compile the template files with
-    engine: jade
-};
-
 var input = fs.readFileSync('index.html');
-var outputHTML = LittleTemplate.render(input, options);
+var outputHTML = LittleTemplate.render(input, function (templateName, context) {
+  return jade.renderFile(templateName, context);
+});
 ```
 
 ## Why would I use this?
