@@ -4,7 +4,7 @@
   "description": "A simple HTML template engine",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "keywords": [
     "engine",
@@ -12,5 +12,9 @@
     "html"
   ],
   "author": "Andrew Myers",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "mocha": "^2.2.4",
+    "should": "^6.0.1"
+  }
 }
