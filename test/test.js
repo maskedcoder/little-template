@@ -25,9 +25,11 @@ var mustacheRender = function (templateName, context) {
 
 describe('Little Template', function () {
   it('should not change plain html', function () {
-    var plainHtml = '<html>\n\n\t<!-- \n\t\tThis has no templates\n\r \n\t-->\n\n\t<body>\n\t\t<h1>Heading</h1>\n\t</body>\n</html>';
+    var plainHtml = '<html>\n\n\t<!-- \n\t\tThis has no templates\n\r \n\t-->\n\n\t<body>\n\t\t<h1>Heading</h1>\n\t</body>\n</html>',
+        blankHtml = '';
 
     template(plainHtml, mustacheRender).should.equal(plainHtml);
+    template(blankHtml, mustacheRender).should.equal(blankHtml);
   });
 
   it('should render a simple template', function () {
