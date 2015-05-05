@@ -2,6 +2,10 @@
   "name": "little-template",
   "version": "1.0.0",
   "description": "A simple HTML template engine",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/maskedcoder/little-template.git"
+  },
   "main": "index.js",
   "scripts": {
     "test": "mocha"
