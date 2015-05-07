@@ -1,7 +1,13 @@
-# Little Template
-#### Server-side static HTML template engine
+# Little Template [![Build Status](https://travis-ci.org/maskedcoder/little-template.svg?branch=master)](https://travis-ci.org/maskedcoder/little-template)
+> Server-side static HTML template engine
 
-Little Template lets you generate static HTML using data specified *in* your HTML. Here's an example:
+Little Template lets you generate static HTML using data specified *in* your HTML.
+
+## Installation
+
+    $ npm install little-template
+
+## Example
 
 ```
 <!-- Omitting HTML -->
@@ -44,7 +50,7 @@ The actual template that the data will be supplied to could be anything: [Handle
 
 ## Why would I use this?
 
-Little Template was created to separate markup and content. It's sort of like DocPad. But very different.
+Little Template was created to separate markup and content. It's sort of like [DocPad](https://github.com/docpad/docpad). But very different.
 
 The basic use case is for creating reusable UI Components. Using Sass and BEM, styling for different components can be isolated in an orderly, reusable fashion. But the markup has to be edited by hand. If a component needs to change, you'll have to change the markup everywhere the component is used. To solve this, Little Template allows you to store the markup for the component in a single place, while keeping your content in the HTML.
 
@@ -71,7 +77,7 @@ Render all templates embedded in the HTML `string`. Because Little Template is t
 
 ## Language Reference
 
-Little Template is based on the [mu2 parser](https://github.com/raycmorgan/Mu/blob/master/lib/mu/parser.js), so it's sort of like a subset of Mustache, with modifications.
+Little Template is based on the [mu2](https://github.com/raycmorgan/Mu)'s [parser](https://github.com/raycmorgan/Mu/blob/14eb29a48489181f41c57f18036a777afe18bd51/lib/mu/parser.js), so it's sort of like a subset of Mustache, with modifications.
 
 All tags take the form `{{#tagType [optionalName]}}<!-- content -->{{/tagType}}`. There are four types of tags.
 
